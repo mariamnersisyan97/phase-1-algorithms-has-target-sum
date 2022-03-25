@@ -1,6 +1,23 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+function hasTargetSum(nums, target) {
+  const newObj ={};
+  for (let i = 0; i < nums.length; i++){
+    const numObj = {}
+  for (i = 0; i < nums.length; i++){
+      let diff = target - nums[i]
+      if(diff in numObj){
+          return [i, numObj[diff]]
+      } else {
+          numObj[nums[i]] = i
+      }
+  }
+  }}
+
+
+
+
+
+
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -9,6 +26,8 @@ function hasTargetSum(array, target) {
 /* 
   Add your pseudocode here
 */
+// Function should return true if any pair of #s in the array add up to the target #
+// Iterate over the array, each index will match with the other indexes
 
 /*
   Add written explanation of your solution here
@@ -32,3 +51,4 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
+
